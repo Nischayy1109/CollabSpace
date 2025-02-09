@@ -1,7 +1,7 @@
 "use client";
 
 import "tldraw/tldraw.css";
-import { Tldraw, DefaultStylePanel, DefaultStylePanelContent } from "tldraw";
+import { Tldraw, DefaultStylePanel } from "tldraw";
 import { useStorageStore } from "./useStorageStore";
 import { useSelf } from "@liveblocks/react/suspense";
 import { Avatars } from "@/components/Avatars";
