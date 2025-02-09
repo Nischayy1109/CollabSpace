@@ -1,7 +1,7 @@
 "use client";
 
 import "tldraw/tldraw.css";
-import { Tldraw, DefaultStylePanel } from "tldraw";
+import { Tldraw, DefaultStylePanel, DefaultStylePanelContent } from "tldraw";
 import { useStorageStore } from "./useStorageStore";
 import { useSelf } from "@liveblocks/react/suspense";
 import { Avatars } from "@/components/Avatars";
@@ -24,7 +24,6 @@ export function StorageTldraw() {
   });
 
   return (
-    // <div>
     <div className="w-full h-full">
       <Tldraw
         store={store}
