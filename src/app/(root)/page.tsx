@@ -36,7 +36,7 @@ const Home = async () => {
         (
           <div className='document-list-container'>
             <div className='document-list-title'>
-              <h3 className='text-28-semibold'>All Documents</h3>
+              <h3 className='text-28-semibold'>All Documents and Canvas</h3>
               <AddDocumentBtn
                 userId={clerkUser.id}
                 email={clerkUser.emailAddresses[0].emailAddress}
