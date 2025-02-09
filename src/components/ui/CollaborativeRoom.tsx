@@ -154,13 +154,13 @@ function CollaborativeRoom({ roomId, roomMetadata, users, currentUserType }: Col
                 <div className='w-full flex h-screen'>
 
 
-                    <div className="editor-containe w-1/2 h-full">
+                    <div className="w-1/2 h-full">
                         <Editor
                             roomId={roomId}
                             currentUserType={currentUserType} />
                     </div>
 
-                    <div className="canvas-containe w-1/2 h-full">
+                    <div className="w-1/2 h-full">
                         <StorageTldraw />
                     </div>
 

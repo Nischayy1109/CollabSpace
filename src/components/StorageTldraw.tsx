@@ -24,7 +24,6 @@ export function StorageTldraw() {
   });
 
   return (
-    // <div>
     <div className="w-full h-full">
       <Tldraw
         store={store}
