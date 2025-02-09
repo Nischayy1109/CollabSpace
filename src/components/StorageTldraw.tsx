@@ -5,7 +5,6 @@ import { Tldraw, DefaultStylePanel } from "tldraw";
 import { useStorageStore } from "./useStorageStore";
 import { useSelf } from "@liveblocks/react/suspense";
 import { Avatars } from "@/components/Avatars";
-import { Badge } from "@/components/Badge";
 
 /**
  * IMPORTANT: LICENSE REQUIRED
@@ -39,7 +38,6 @@ export function StorageTldraw() {
               >
                 <Avatars />
                 <DefaultStylePanel />
-                <Badge />
               </div>
             ),
           }}

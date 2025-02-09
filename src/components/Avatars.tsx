@@ -2,6 +2,7 @@
 
 import { useOthers, useSelf } from "@liveblocks/react/suspense";
 import styles from "./Avatars.module.css";
+import Image from "next/image";
 
 export function Avatars() {
   const users = useOthers();
@@ -28,11 +29,13 @@ export function Avatars() {
 export function Avatar({ picture, name }: { picture: string; name: string }) {
   return (
     <div className={styles.avatar} data-tooltip={name}>
-      <img
+      <Image
         alt={name}
         src={picture}
         className={styles.avatar_picture}
         data-tooltip={name}
+        height={36}
+        width={36}
       />
     </div>
   );

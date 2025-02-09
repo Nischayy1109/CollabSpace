@@ -277,7 +277,7 @@ export function useStorageStore({
       unsubs.forEach((fn) => fn());
       unsubs.length = 0;
     };
-  }, [room, store]);
+  }, [room, store,user]);
 
   return storeWithStatus;
 }

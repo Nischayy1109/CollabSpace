@@ -17,7 +17,7 @@ import Loader from '../Loader';
 
 // import FloatingToolbarPlugin from './plugins/FloatingToolbarPlugin'
 import { useThreads } from '@liveblocks/react/suspense';
-import Comments from '../Comments';
+// import Comments from '../Comments';
 import FloatingToolbar from './plugins/FloatingToolbar';
 import { DeleteModal } from '../DeleteModal';
 // import { DeleteModal } from '../DeleteModal';
@@ -28,7 +28,7 @@ function Placeholder() {
 }
 
 export function Editor({ roomId, currentUserType }: { roomId: string, currentUserType: UserType }) {
-  const [toggle, setToggle] = useState(true);
+  // const [toggle, setToggle] = useState(true);
 
   const status = useIsEditorReady();
   console.log(status);
