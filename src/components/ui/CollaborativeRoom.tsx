@@ -88,7 +88,7 @@ function CollaborativeRoom({ roomId, roomMetadata, users, currentUserType }: Col
             }}>
             <ClientSideSuspense fallback={<Loader />}>
 
-                <div className='collaborative-room'>
+                <div className='collaborative-room w-full' >
                     <Header>
                         <div ref={containerRef} className="flex w-fit items-center justify-center gap-2">
                             {editing && !loading
@@ -149,19 +149,18 @@ function CollaborativeRoom({ roomId, roomMetadata, users, currentUserType }: Col
                         </div>
 
                     </Header>
-                    <div className="flex w-full h-full">
-                        
-                        <div className="canvas-container">
-                            <StorageTldraw />
-                        </div>
+                </div>
 
-                        <div className="editor-container">
-                            <Editor
-                                roomId={roomId}
-                                currentUserType={currentUserType} />
-                        </div>
+                <div className='w-full bg-green-400'>
+                    <div className="editor-containe size-6/12  bg-red-400 h-full">
+                        <Editor
+                            roomId={roomId}
+                            currentUserType={currentUserType} />
                     </div>
 
+                    <div className="canvas-containe w-[50%] h-full">
+                        <StorageTldraw />
+                    </div>
                 </div>
 
 

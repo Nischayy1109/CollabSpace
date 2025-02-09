@@ -83,7 +83,7 @@
   }
 
   .toolbar-wrapper {
-    @apply z-50 custom-scrollbar w-screen overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
+    @apply z-50 custom-scrollbar overflow-auto border-y border-dark-300 bg-dark-100 pl-3 pr-4 shadow-sm;
   }
 
   .editor-wrapper {

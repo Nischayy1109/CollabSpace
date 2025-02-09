@@ -10,7 +10,7 @@ import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin';
 import { ContentEditable } from '@lexical/react/LexicalContentEditable';
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 import { LexicalErrorBoundary } from '@lexical/react/LexicalErrorBoundary';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FloatingComposer, FloatingThreads, liveblocksConfig, LiveblocksPlugin, useIsEditorReady } from '@liveblocks/react-lexical'
 import Loader from '../Loader';
@@ -28,7 +28,10 @@ function Placeholder() {
 }
 
 export function Editor({ roomId, currentUserType }: { roomId: string, currentUserType: UserType }) {
+  const [toggle, setToggle] = useState(true);
+
   const status = useIsEditorReady();
+  console.log(status);
   const { threads } = useThreads();
 
   const initialConfig = liveblocksConfig({
@@ -44,7 +47,7 @@ export function Editor({ roomId, currentUserType }: { roomId: string, currentUse
 
   return (
     <LexicalComposer initialConfig={initialConfig}>
-      <div className="editor-container size-full">
+      <div className="editor-container size-6/12">
         <div className="toolbar-wrapper flex min-w-full justify-between">
           <ToolbarPlugin />
           {currentUserType === 'editor' && <DeleteModal roomId={roomId} />}
@@ -66,11 +69,11 @@ export function Editor({ roomId, currentUserType }: { roomId: string, currentUse
             </div>
           )}
 
-          {/* <LiveblocksPlugin>
+          <LiveblocksPlugin>
             <FloatingComposer className="w-[350px]" />
             <FloatingThreads threads={threads} />
-            <Comments />
-          </LiveblocksPlugin> */}
+            {/* <Comments /> */}
+          </LiveblocksPlugin>
         </div>
       </div>
     </LexicalComposer>
