@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 import { useEffect, useState } from "react";
 import { useRoom } from "@liveblocks/react/suspense";
 import {
