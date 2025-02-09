@@ -25,7 +25,7 @@ export function StorageTldraw() {
 
   return (
     // <div>
-    <div className="w-[600px] h-full">
+    <div className="w-full h-full">
       <Tldraw
         store={store}
         components={{
