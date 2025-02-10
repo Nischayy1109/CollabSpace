@@ -279,7 +279,7 @@ export function useStorageStore({
       unsubs.forEach((fn) => fn());
       unsubs.length = 0;
     };
-  }, [room, store,user]);
+  }, [room, store]);
 
   return storeWithStatus;
 }
